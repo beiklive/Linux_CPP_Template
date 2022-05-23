@@ -5,7 +5,7 @@ THIRD	:= ./src/3rd
 FUNC	:= ./src/func
 OBJS_DIR := ./build/
 
-SOURCE  := $(wildcard *.cpp) $(wildcard ${FUNC}/*.cpp) $(wildcard ${FUNC}/*.hpp)
+SOURCE  := $(wildcard *.cpp) $(wildcard ${FUNC}/*.cpp)
 # OBJS    := $(addprefix $(OBJS_DIR), $(patsubst %.cpp,%.o,$(notdir $(SOURCE))))
 OBJS    := $(patsubst %.cpp,%.o,$(SOURCE))
 
