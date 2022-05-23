@@ -1,9 +1,10 @@
 #include <iostream>
-
-using std::cout;
-using std::endl;
-
+#include <hello.h>
+#include <spdlog/spdlog.h>
 int main(){
-    cout << "App start ~~" << endl;
+    std::cout << "App start ~~" << std::endl;
+    Hello();
+    test();
+    spdlog::info("spdlog init");
     return 0;
 }
