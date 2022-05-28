@@ -17,10 +17,10 @@ TARGET  := main
 #编译参数
 CC      := g++
 LIBS    :=
-LDFLAGS :=
-DEFINES :=
+LDFLAGS := -lpthread
+DEFINES := 
 INCLUDE := -I${THIRD} -I${FUNC}
-CFLAGS  := -g -Wall -O3 $(DEFINES) $(INCLUDE)
+CFLAGS  := -g -Wall -O3 $(DEFINES) $(INCLUDE) $(LDFLAGS)
   
 #i think you should do anything here
 #下面的基本上不需要做任何改动了
