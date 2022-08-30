@@ -4,36 +4,37 @@
 
 ## 目录结构
 
->└───src
->    ├───3rd
->    │   ├───dpool
->    │   ├───filesystem
->    │   ├───httplib
->    │   ├───nlohmann
->    │   └───spdlog
->    └───func
 
 `main.cpp`为整个程序的启动文件
 
-`src/3rd`为三方库的存放目录
+`src`存放cpp文件
 
-`src/func`为自己实现的功能
+`include`存放cpp对应的头文件
+
+`headonly`是我常用的headonly的库
 
 ## 使用
 
-编译
+### 编译
 
 ```shell
-make
+./compile.sh
 ```
 
-运行
+或者
 
 ```shell
-make run  
-# or
-./main
+cd build
+cmake .. && make
 ```
+
+
+### 运行
+
+```shell
+./bin/app
+```  
+
 
 ## 三方库介绍
 
