@@ -38,9 +38,9 @@ cmake .. && make
 
 ## 三方库介绍
 
-`nlohmann` 一个json库
+`nlohmann/json` 一个json库
 
-`httplib` 一个http库
+`cpp-httplib` 一个http库
 
 `spdlog` 一个log库
 
