@@ -34,14 +34,15 @@ cmake .. && make
 ```shell
 ./startapp.sh
 ```  
-> [help]
-> ./startup.sh close    [关闭程序] <br>
-> ./startup.sh start    [启动/重启程序] <br> 
-> 携带参数   ./startup.sh start "para1 \"stringpara2\" para3" <br>
-> ./startup.sh show     [显示程序进程信息]  <br>
-> ./startup.sh log      [显示程序日志]  <br>
-> ./startup.sh clean    [清除日志和程序缓存]    <br>
-
+```bash
+[help]
+./startup.sh close    [关闭程序]
+./startup.sh start    [启动/重启程序]
+    携带参数   ./startup.sh start "para1 \"stringpara2\" para3"
+./startup.sh show     [显示程序进程信息]
+./startup.sh log      [显示程序日志]
+./startup.sh clean    [清除日志和程序缓存] 
+```
 ## 三方库介绍
 
 `nlohmann/json` 一个json库
