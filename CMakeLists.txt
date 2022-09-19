@@ -17,6 +17,10 @@ include_directories(headonly)
 message("[INFO] add directory 'headonly'")
 
 
-add_compile_options(-std=c++11 -Wall -lpthread) 
+add_compile_options(-std=c++11 -Wall) 
 
 add_executable(${PRO_NAME} main.cpp ${SRC_LIST})
+
+set_target_properties(${TARGET} PROPERTIES
+COMPILE_FLAGS "-pthread"
+LINK_FLAGS "-pthread")

@@ -22,6 +22,7 @@ init(){
             log "cd $(pwd)"
             mkdir $EXEC_PATH
             log "mkdir $EXEC_PATH"
+            cd $APP_DIR/$EXEC_PATH
             cp -a $APP_DIR/$APP_PATH/$APP_NAME $APP_DIR/$EXEC_PATH
             log "cp -a $APP_DIR/$APP_PATH/$APP_NAME $APP_DIR/$EXEC_PATH"
             log "正在修改程序名称..."
@@ -144,6 +145,24 @@ else
             log "程序正在运行，无法清除缓存"
         fi
     fi
-
+    if [ "$1" == "class" ]; then
+        log "正在生成class文件..."
+        touch $APP_DIR/src/$2.cpp
+        echo "#include \"$2.h\"" >> $APP_DIR/src/$2.cpp
+        echo "$2::$2(){}" >> $APP_DIR/src/$2.cpp
+        echo "$2::~$2(){}" >> $APP_DIR/src/$2.cpp
+        touch $APP_DIR/include/$2.h
+        echo "#ifndef $2_H" >> $APP_DIR/include/$2.h
+        echo "#define $2_H" >> $APP_DIR/include/$2.h
+        echo "class $2" >> $APP_DIR/include/$2.h
+        echo "{" >> $APP_DIR/include/$2.h
+        echo "public:" >> $APP_DIR/include/$2.h
+        echo "    $2();" >> $APP_DIR/include/$2.h
+        echo "    ~$2();" >> $APP_DIR/include/$2.h
+        echo "private:" >> $APP_DIR/include/$2.h
+        echo "};" >> $APP_DIR/include/$2.h
+        echo "#endif" >> $APP_DIR/include/$2.h
+        log "生成class文件成功"
+    fi
 fi
 # ===================================main========================================

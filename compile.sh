@@ -13,4 +13,4 @@ rm -rf *
 cd ..
 cd build/
 rm -rf *
-cmake .. && make
+cmake .. && make -j$(nproc)
